@@ -1,0 +1,11 @@
+.logo span {
+  border-left: 2px solid black;
+  padding: 10px;
+}
+.logo::before {
+  content: "|";
+  padding-right: 10px;
+}
+.nav-part {
+  margin-left: 500px;
+}
