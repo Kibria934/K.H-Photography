@@ -21,7 +21,7 @@ const ServiceCard = ({ card }) => {
           <h4>{name}</h4>
           <h4>Price: ${price}</h4>
           <p>{description}</p>
-          <Link className="btn btn-dark fs-6 fw-bold" to={"/" + id}>
+          <Link className="btn btn-dark fs-6 fw-bold" to={"/service/" + id}>
             Check Out
           </Link>
         </div>

@@ -1,9 +1,9 @@
 import React from "react";
-
+import "./Blogs.css";
 const Blogs = () => {
   return (
-    <div>
-      <div className="container">
+    <div className="card-boxs">
+      <div className="container py-4 card-container">
         <div className="card m-2 px-4">
           <h4 className="card-title">
             Q1. The defference between Authentication and Authorization
@@ -70,11 +70,25 @@ const Blogs = () => {
             <li>Kumulos - App Performance Management;</li>
           </p>
         </div>
-        <div className="card">
+        <div className="px-4 m-2 card">
           <h4>
             Q3.What other services does firebase provide other than
             authentication
           </h4>
+          <p>
+            <strong>Ans: Firebase provide us:</strong>
+            <br />
+            <ol>
+              <li>Firebase Database</li>
+              <li>Google Analytics for Firebase</li>
+              <li>Firebase Cloud Messaging</li>
+              <li>Firebase plateform</li>
+              <li>Firebase Hoisting</li>
+              <li>Firebase app check</li>
+              <li>Firebae dynamic link</li>
+              <li>Firebase performance monitoring. etc</li>
+            </ol>
+          </p>
         </div>
       </div>
     </div>

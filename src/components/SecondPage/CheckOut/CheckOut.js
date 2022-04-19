@@ -2,13 +2,15 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { MyAllDataContex } from "../../../App";
 
-const CheckOut = () => {
+const CheckOut = ({ data }) => {
+  console.log(data);
   let param = useParams();
   const [details, setDetails] = useState();
   useEffect(() => {
-    fetch("services.json")
-      .then((res) => res.json())
-      .then((data) => setDetails(data));
+    fetch(data).then(setDetails(data));
+    // fetch("services.json")
+    //   .then((res) => res.json())
+    //   .then((data) => setDetails(data));
   }, []);
   const single = details?.find((card) => card.id == param.Id);
 

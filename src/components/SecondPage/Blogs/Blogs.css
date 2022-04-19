@@ -1,0 +1,11 @@
+/* .card-container {
+  background-color: black;
+} */
+.card-boxs {
+  background-color: rgb(156, 156, 156);
+}
+.card {
+  background-color: black;
+  color: rgb(198, 199, 200);
+  letter-spacing: 0.3px;
+}

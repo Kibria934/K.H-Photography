@@ -14,6 +14,7 @@ import RequireAuth from "./components/AuthPage/RequireAuth/RequireAuth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "./firebase.init";
 import Blogs from "./components/SecondPage/Blogs/Blogs";
+import Nothing from "./components/SharedPage/Nothing/Nothing";
 
 export const MyAllDataContex = createContext();
 function App() {
@@ -35,17 +36,19 @@ function App() {
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/home" element={<Home></Home>}></Route>
           <Route path="/blog" element={<Blogs></Blogs>}></Route>
+          <Route path="/about" element={<About></About>}></Route>
           <Route path="/service" element={<Services></Services>}></Route>
           <Route
-            path="/:Id"
+            path="/service/:Id"
             element={
               <RequireAuth>
-                <CheckOut></CheckOut>
+                <CheckOut data={services}></CheckOut>
               </RequireAuth>
             }
           ></Route>
           <Route path="/signin" element={<SignIn></SignIn>}></Route>
           <Route path="/signup" element={<SignUp></SignUp>}></Route>
+          <Route path="*" element={<Nothing></Nothing>}></Route>
         </Routes>
       </MyAllDataContex.Provider>
     </div>
