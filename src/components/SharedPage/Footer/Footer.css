@@ -1,0 +1,11 @@
+.footer-section {
+  background: rgba(3, 22, 40, 0.92);
+  color: white;
+  height: 5%;
+  letter-spacing: 0.8px;
+}
+.footer-area {
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+}

@@ -5,12 +5,15 @@ import {
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import toast, { Toaster } from "react-hot-toast";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { MyAllDataContex } from "../../../App";
 import auth from "../../../firebase.init";
 import "./SignIn.css";
 
 const SignIn = () => {
+  let navigate = useNavigate();
+  let location = useLocation();
+  let from = location.state?.from?.pathname || "/";
   // const [services, setServices] = useContext(MyAllDataContex);
   // console.log(services);
   const [userInfo, setUserInfo] = useState({
@@ -40,19 +43,21 @@ const SignIn = () => {
       }
     }
     if (signInUser) {
-      navigate("/");
-      toast("Successfully signed In");
+      navigate(from, { replace: true });
+      toast("Successfully signede In");
     }
   }, [signInError, signInUser]);
 
-  const navigate = useNavigate();
   const handleSignIn = () => {
     if (!user) {
       signInWithGoogle();
-      toast("Successfully signed In");
-      navigate("/");
+      navigate(from, { replace: true });
+      // toast("Successfully signed In");
     }
   };
+  if (user) {
+    navigate(from, { replace: true });
+  }
   const handleSignInWithPass = (e) => {
     e.preventDefault();
     if (!user) {
