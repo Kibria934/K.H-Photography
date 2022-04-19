@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import {
   useAuthState,
+  useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
@@ -32,32 +33,35 @@ const SignIn = () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
   const [user, loading, error] = useAuthState(auth);
+  const [sendPasswordResetEmail, resetSending, resetError] =
+    useSendPasswordResetEmail(
+      useEffect(() => {
+        if (signInError) {
+          switch (signInError?.code) {
+            case "auth/user-not-found":
+              toast.error("Please create an account first");
+              break;
+            default:
+              toast.error(signInError.message);
+          }
+        }
+      }, [signInError, signInUser])
+    );
+  // if (signInUser) {
+  //   navigate(from, { replace: true });
+  // }
 
-  useEffect(() => {
-    if (signInError) {
-      switch (signInError?.code) {
-        case "auth/user-not-found":
-          toast.error("Please create an account first");
-          break;
-        default:
-          toast.error(signInError.message);
-      }
-    }
-    if (signInUser) {
-      navigate(from, { replace: true });
-      // toast("Successfully signede In");
-    }
-  }, [signInError, signInUser]);
   if (user) {
     navigate(from, { replace: true });
-    return toast("Successfully signed In");
+    toast("Successfully signed In");
+    return;
   }
 
-  const handleSignIn = () => {
+  const handleSignIn = (e) => {
+    e.preventDefault();
     if (!user) {
       signInWithGoogle();
       navigate(from, { replace: true });
-      // toast("Successfully signed In");
     }
   };
 
@@ -115,7 +119,13 @@ const SignIn = () => {
           </p>
           <p className="form-line">
             Forgotten password?
-            <span className="ms-1 text-decoration-underline">
+            <span
+              className="ms-1 text-decoration-underline"
+              onClick={async () => {
+                await sendPasswordResetEmail(userInfo.email);
+                toast("Sent email");
+              }}
+            >
               Reset Password
             </span>
           </p>
