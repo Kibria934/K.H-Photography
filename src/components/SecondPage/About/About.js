@@ -13,7 +13,7 @@ const About = () => {
           <small>student of PHero</small>
           <p className="aim">
             I am very simple guy. I love coding.From my childhood I just wanted
-            to be a software engineer.But I could study in computer
+            to be a software engineer.But I could not study in computer
             science.Recently I am student of PHero. Now My Aim in life is to
             become a programmer. I want to make it my carer. I am very
             interested to programming that's why I think I can do this. I have a

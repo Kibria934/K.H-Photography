@@ -90,9 +90,6 @@ const SignUp = () => {
   }, [hookError, user]);
 
   // submit function ===========
-  if (user) {
-    // console.log("user", user.displayName);
-  }
   const handleCreateUser = async (e) => {
     e.preventDefault();
     if (!user && userInfo.email && userInfo.confirmPassword) {

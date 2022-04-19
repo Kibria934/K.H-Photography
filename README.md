@@ -1,12 +1,12 @@
 # K.H Photography 
-Live Link: 
+Live Link:https://celebrated-faun-dfa454.netlify.app/
 
 
 
 ## Used package:
 - Firebase Authentication
 - Firebase Authentication hook
-- Firebase Hoisting
+- Netlify Hoisting
 - React Bootstrap
 - React hot toast
 - React Router

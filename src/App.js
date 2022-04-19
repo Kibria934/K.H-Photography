@@ -23,7 +23,7 @@ function App() {
     fetch("services.json")
       .then((res) => res.json())
       .then((data) => setServices(data));
-  }, [2]);
+  }, [services]);
   const [user, loading, error] = useAuthState(auth);
   return (
     <div className="w-100 px-4 mx-auto">

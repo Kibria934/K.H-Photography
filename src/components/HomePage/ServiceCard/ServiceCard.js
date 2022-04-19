@@ -5,12 +5,10 @@ import { MyAllDataContex, myAllDataContex } from "../../../App";
 import "./ServiceCard.css";
 
 const ServiceCard = ({ card }) => {
-  // console.log(card.name);
   const { name, img, price, description, id } = card;
   const navigate = useNavigate();
   const [services] = useContext(MyAllDataContex);
   const param = useParams();
-  console.log(card);
   return (
     <div>
       <div className="w-100 card-box">

@@ -11,7 +11,7 @@ const CheckOut = ({ data }) => {
     // fetch("services.json")
     //   .then((res) => res.json())
     //   .then((data) => setDetails(data));
-  }, []);
+  }, [data]);
   const single = details?.find((card) => card.id == param.Id);
 
   return (
