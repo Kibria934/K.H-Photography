@@ -15,7 +15,7 @@ const Footer = () => {
           <p>abc@gmail.com</p>
         </div>
       </div>
-      <p className="text-center text-primary">
+      <p className="text-center text-success">
         All right resarve K.H photography.copyright &copy; 2022
       </p>
     </div>

@@ -6,7 +6,6 @@ import Home from "./components/HomePage/Home/Home.js";
 import SignIn from "./components/AuthPage/SignIn/SignIn";
 import SignUp from "./components/AuthPage/SignUp/SignUp";
 import About from "./components/SecondPage/About/About";
-import Blog from "./components/SecondPage/Blog/Blog";
 import Services from "./components/HomePage/ServicesPage/Services";
 import CheckOut from "./components/SecondPage/CheckOut/CheckOut";
 import { createContext, useEffect, useState } from "react";
@@ -14,6 +13,7 @@ import Footer from "./components/SharedPage/Footer/Footer";
 import RequireAuth from "./components/AuthPage/RequireAuth/RequireAuth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "./firebase.init";
+import Blogs from "./components/SecondPage/Blogs/Blogs";
 
 export const MyAllDataContex = createContext();
 function App() {
@@ -34,7 +34,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/home" element={<Home></Home>}></Route>
-          <Route path="/blog" element={<Blog></Blog>}></Route>
+          <Route path="/blog" element={<Blogs></Blogs>}></Route>
           <Route path="/service" element={<Services></Services>}></Route>
           <Route
             path="/:Id"
