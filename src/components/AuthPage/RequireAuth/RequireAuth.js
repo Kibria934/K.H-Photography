@@ -9,6 +9,9 @@ const RequireAuth = ({ children }) => {
   const [services, setServices, auth, user, loading, error] =
     useContext(MyAllDataContex);
   let location = useLocation();
+  if (loading) {
+    <p>loading...</p>;
+  }
   if (user) {
     console.log(user);
   }

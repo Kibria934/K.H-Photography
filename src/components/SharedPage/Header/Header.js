@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Header.css";
 import {
   Button,
@@ -14,20 +14,17 @@ import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
+import { MyAllDataContex } from "../../../App";
 
-const Header = () => {
-  const [user, loading, error] = useAuthState(auth);
-  const [name, setName] = useState("");
-  // console.log(user);
-
-  useEffect(() => {
-    setName(user?.displayName);
-    // console.log(user);
-    if (loading) {
-      <p>loading...</p>;
-    }
-  }, [user, loading]);
-
+const Header = ({ name }) => {
+  // const [user, loading, error] = useAuthState(auth);
+  const [services, setServices, auth, user, loading, error] =
+    useContext(MyAllDataContex);
+  // const [name, setName] = useState("");
+  //
+  if (loading) {
+    <p>loading..</p>;
+  }
   return (
     <div>
       <Navbar bg="light" expand="lg">
@@ -91,7 +88,7 @@ const Header = () => {
             <Nav.Link>
               <span className="text-decoration-none text-black px-4 ">
                 {loading && "loadig..."}
-                {user ? user?.displayName : name}
+                {name}
               </span>
             </Nav.Link>
           </Navbar.Collapse>

@@ -26,10 +26,11 @@ function App() {
   const [user, loading, error] = useAuthState(auth);
   return (
     <div className="w-100 px-4 mx-auto">
-      <Header></Header>
       <MyAllDataContex.Provider
         value={[services, setServices, auth, user, loading, error]}
       >
+        <Header name={user && user.displayName}></Header>
+
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/home" element={<Home></Home>}></Route>

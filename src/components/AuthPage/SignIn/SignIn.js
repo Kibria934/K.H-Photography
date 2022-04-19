@@ -14,6 +14,7 @@ const SignIn = () => {
   let navigate = useNavigate();
   let location = useLocation();
   let from = location.state?.from?.pathname || "/";
+
   // const [services, setServices] = useContext(MyAllDataContex);
   // console.log(services);
   const [userInfo, setUserInfo] = useState({
@@ -44,9 +45,13 @@ const SignIn = () => {
     }
     if (signInUser) {
       navigate(from, { replace: true });
-      toast("Successfully signede In");
+      // toast("Successfully signede In");
     }
   }, [signInError, signInUser]);
+  if (user) {
+    navigate(from, { replace: true });
+    return toast("Successfully signed In");
+  }
 
   const handleSignIn = () => {
     if (!user) {
@@ -55,9 +60,7 @@ const SignIn = () => {
       // toast("Successfully signed In");
     }
   };
-  if (user) {
-    navigate(from, { replace: true });
-  }
+
   const handleSignInWithPass = (e) => {
     e.preventDefault();
     if (!user) {
