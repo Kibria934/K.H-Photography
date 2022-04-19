@@ -1,0 +1,15 @@
+.card-box {
+  color: rgb(65, 65, 65);
+  letter-spacing: 4px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.card-box img {
+  height: 800px;
+}
+.img-box img:hover {
+  transform: scale(1.1);
+  transition: transform 1s ease-out;
+}
+.img-box {
+  overflow: hidden;
+}

@@ -1,44 +1,50 @@
 [
      {
           "id": 1,
-          "name": "ENGINE DIAGNOSTIC",
+          "name": "Flower with sun ray",
           "price": "300",
-          "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-          "img": "https://i.ibb.co/dGDkr4v/1.jpg"
+          "description": "This is the picture of Flower with morning sun ray.My fabourite this is",
+          "img": "https://i.ibb.co/vYBwVzT/card6.jpg",
+          "catagory": "Model with nature"
      },
      {
           "id": 2,
-          "name": "WHEEL ALIGNMENT",
+          "name": "Laura Chouett",
           "price": "100",
-          "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-          "img": "https://i.ibb.co/tY8dmnP/2.jpg"
+          "description": "This is the picture of Loura Chouett.My fabourite this is",
+          "img": "https://i.ibb.co/XSBPGT3/card3.jpg",
+          "catagory": "Model with nature"
      },
      {
           "id": 3,
-          "name": "OIL CHANGING",
+          "name": "Dynamic wrang",
           "price": "150",
-          "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-          "img": "https://i.ibb.co/Yh04YVw/3.jpg"
+          "description": "This is the picture of Dynmice wrang.My fabourite this is",
+          "img": "https://i.ibb.co/k0pFHdj/card1.jpg",
+          "catagory": "Model with nature"
      },
      {
           "id": 4,
-          "name": "BRAKE REPARING",
+          "name": "Eugene Golovesov",
           "price": "180",
-          "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-          "img": "https://i.ibb.co/ZX2Cbkn/4.jpg"
+          "description": "This is the picture of Eugene Golovesov.My fabourite this is",
+          "img": "https://i.ibb.co/6B9FncY/card2.jpg",
+          "catagory": "Model with nature"
      },
      {
           "id": 5,
-          "name": "WASH AND GLASSING",
+          "name": "Maksym tymchyk",
           "price": "100",
-          "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-          "img": "https://i.ibb.co/FgQ3jXp/5.jpg"
+          "description": "This is the picture of Maksym tumchyk.My fabourite this is",
+          "img": "https://i.ibb.co/YWsjgyY/maksym-tymchyk-5-Elr-O9u-Z-ck-unsplash-1.jpg",
+          "catagory": "Model with nature"
      },
      {
           "id": 6,
-          "name": "COMPLETE ANALYSIS",
+          "name": "Haven like forest",
           "price": "300",
-          "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
-          "img": "https://i.ibb.co/zJy5ZDd/6.jpg"
+          "description": "This is the picture of Haven like forest.My fabourite this is",
+          "img": "https://i.ibb.co/Y8b5gc9/michail-dementiev-1q-Nr-Az-Vm6z8-unsplash.jpg",
+          "catagory": "Model with nature"
      }
 ]
