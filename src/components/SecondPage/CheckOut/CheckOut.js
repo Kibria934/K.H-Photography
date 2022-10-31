@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { MyAllDataContex } from "../../../App";
 
 const CheckOut = ({ data }) => {
-  console.log(data);
   let param = useParams();
   const [details, setDetails] = useState();
   useEffect(() => {

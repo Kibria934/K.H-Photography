@@ -17,6 +17,7 @@ import Blogs from "./components/SecondPage/Blogs/Blogs";
 import Nothing from "./components/SharedPage/Nothing/Nothing";
 
 export const MyAllDataContex = createContext();
+
 function App() {
   const [services, setServices] = useState([]);
   useEffect(() => {
@@ -24,7 +25,9 @@ function App() {
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, [services]);
+
   const [user, loading, error] = useAuthState(auth);
+
   return (
     <div className="w-100 px-4 mx-auto">
       <MyAllDataContex.Provider
